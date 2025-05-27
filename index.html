@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Profesional</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Cursor personalizado -->
+    <div class="custom-cursor"></div>
+
+    <!-- Menú de navegación -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="logo">Mi<span>Portafolio</span></a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Inicio</a></li>
+                <li><a href="#about" class="nav-link">Sobre Mí</a></li>
+                <li><a href="#skills" class="nav-link">Habilidades</a></li>
+                <li><a href="projects.html" class="nav-link">Proyectos</a></li>
+                <li><a href="cv.html" class="nav-link active">Mi CV</a></li>
+                <li><a href="#contact" class="nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title animate-text">Hola, soy <span id="typed-name"></span></h1>
+            <p class="hero-subtitle" id="typed-text"></p>
+            <div class="hero-buttons">
+                <a href="cv.html" class="btn btn-primary">Ver mi CV</a>
+                <a href="#contact" class="btn btn-secondary">Contáctame</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="image-container">
+                <img src="assets/images/profile.jpg" alt="Mi foto de perfil" class="profile-img">
+                <div class="circle-animation"></div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Otras secciones irían aquí -->
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

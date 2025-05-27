@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi CV Interactivo</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/cv-editor.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Cursor personalizado -->
+    <div class="custom-cursor"></div>
+
+    <!-- Menú de navegación -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">Mi<span>Portafolio</span></a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="index.html#about" class="nav-link">Sobre Mí</a></li>
+                <li><a href="index.html#skills" class="nav-link">Habilidades</a></li>
+                <li><a href="projects.html" class="nav-link">Proyectos</a></li>
+                <li><a href="cv.html" class="nav-link active">Mi CV</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sección de CV -->
+    <section class="cv-section">
+        <div class="cv-container">
+            <h1 class="section-title">Mi <span>Curriculum</span></h1>
+            <p class="section-subtitle">Explora y edita mi información profesional</p>
+            
+            <div class="cv-actions">
+                <button id="upload-cv" class="btn btn-primary">
+                    <i class="fas fa-upload"></i> Subir CV
+                </button>
+                <button id="edit-cv" class="btn btn-secondary">
+                    <i class="fas fa-edit"></i> Editar CV
+                </button>
+                <button id="download-cv" class="btn btn-accent">
+                    <i class="fas fa-download"></i> Descargar PDF
+                </button>
+                <input type="file" id="cv-file-input" accept=".pdf,.doc,.docx" style="display: none;">
+            </div>
+            
+            <div class="cv-layout">
+                <!-- Panel de vista previa -->
+                <div class="cv-preview">
+                    <div class="cv-paper">
+                        <div class="cv-header">
+                            <div class="cv-photo">
+                                <img src="assets/images/profile.jpg" alt="Foto de perfil" id="cv-profile-img">
+                                <button class="change-photo-btn">Cambiar foto</button>
+                                <input type="file" id="profile-img-input" accept="image/*" style="display: none;">
+                            </div>
+                            <div class="cv-info">
+                                <h1 id="cv-name">Tu Nombre</h1>
+                                <h2 id="cv-title">Tu Profesión</h2>
+                                <div class="cv-contact">
+                                    <p><i class="fas fa-envelope"></i> <span id="cv-email">tu@email.com</span></p>
+                                    <p><i class="fas fa-phone"></i> <span id="cv-phone">+123 456 7890</span></p>
+                                    <p><i class="fas fa-map-marker-alt"></i> <span id="cv-location">Tu Ciudad, País</span></p>
+                                    <p><i class="fas fa-link"></i> <span id="cv-website">tusitio.com</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="cv-body">
+                            <div class="cv-left">
+                                <section class="cv-section">
+                                    <h3><i class="fas fa-user"></i> Sobre Mí</h3>
+                                    <p id="cv-about">Breve descripción sobre ti, tus habilidades y objetivos profesionales.</p>
+                                </section>
+                                
+                                <section class="cv-section">
+                                    <h3><i class="fas fa-briefcase"></i> Experiencia Laboral</h3>
+                                    <div id="cv-experience">
+                                        <!-- Experiencias se agregarán dinámicamente -->
+                                        <div class="experience-item">
+                                            <h4>Nombre del Puesto</h4>
+                                            <h5>Empresa</h5>
+                                            <div class="cv-date">Fecha de inicio - Fecha de fin</div>
+                                            <p>Descripción de responsabilidades y logros.</p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            
+                            <div class="cv-right">
+                                <section class="cv-section">
+                                    <h3><i class="fas fa-graduation-cap"></i> Educación</h3>
+                                    <div id="cv-education">
+                                        <!-- Educación se agregará dinámicamente -->
+                                        <div class="education-item">
+                                            <h4>Título Académico</h4>
+                                            <h5>Institución</h5>
+                                            <div class="cv-date">Fecha de inicio - Fecha de fin</div>
+                                        </div>
+                                    </div>
+                                </section>
+                                
+                                <section class="cv-section">
+                                    <h3><i class="fas fa-code"></i> Habilidades</h3>
+                                    <div id="cv-skills">
+                                        <!-- Habilidades se agregarán dinámicamente -->
+                                        <div class="skill-item">
+                                            <span class="skill-name">Habilidad</span>
+                                            <div class="skill-bar">
+                                                <div class="skill-level" style="width: 80%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                
+                                <section class="cv-section">
+                                    <h3><i class="fas fa-certificate"></i> Certificaciones</h3>
+                                    <div id="cv-certifications">
+                                        <!-- Certificaciones se agregarán dinámicamente -->
+                                        <div class="certification-item">
+                                            <h4>Nombre de la Certificación</h4>
+                                            <h5>Institución</h5>
+                                            <div class="cv-date">Fecha de obtención</div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Panel de edición (inicialmente oculto) -->
+                <div class="cv-editor" id="cv-editor-panel">
+                    <h2><i class="fas fa-edit"></i> Editor de CV</h2>
+                    
+                    <form id="cv-form">
+                        <div class="form-section">
+                            <h3>Información Básica</h3>
+                            <div class="form-group">
+                                <label for="edit-name">Nombre Completo</label>
+                                <input type="text" id="edit-name" placeholder="Tu nombre completo">
+                            </div>
+                            <div class="form-group">
+                                <label for="edit-title">Título Profesional</label>
+                                <input type="text" id="edit-title" placeholder="Tu profesión o especialidad">
+                            </div>
+                            <div class="form-group">
+                                <label for="edit-about">Sobre Mí</label>
+                                <textarea id="edit-about" rows="4" placeholder="Breve descripción sobre ti"></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Información de Contacto</h3>
+                            <div class="form-group">
+                                <label for="edit-email">Email</label>
+                                <input type="email" id="edit-email" placeholder="tu@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="edit-phone">Teléfono</label>
+                                <input type="tel" id="edit-phone" placeholder="+123 456 7890">
+                            </div>
+                            <div class="form-group">
+                                <label for="edit-location">Ubicación</label>
+                                <input type="text" id="edit-location" placeholder="Ciudad, País">
+                            </div>
+                            <div class="form-group">
+                                <label for="edit-website">Sitio Web</label>
+                                <input type="url" id="edit-website" placeholder="https://tusitio.com">
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Experiencia Laboral</h3>
+                            <div id="edit-experience-container">
+                                <!-- Experiencias editables se agregarán aquí -->
+                            </div>
+                            <button type="button" id="add-experience" class="btn btn-small">
+                                <i class="fas fa-plus"></i> Agregar Experiencia
+                            </button>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Educación</h3>
+                            <div id="edit-education-container">
+                                <!-- Educación editable se agregará aquí -->
+                            </div>
+                            <button type="button" id="add-education" class="btn btn-small">
+                                <i class="fas fa-plus"></i> Agregar Educación
+                            </button>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Habilidades</h3>
+                            <div id="edit-skills-container">
+                                <!-- Habilidades editables se agregarán aquí -->
+                            </div>
+                            <button type="button" id="add-skill" class="btn btn-small">
+                                <i class="fas fa-plus"></i> Agregar Habilidad
+                            </button>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" id="save-cv" class="btn btn-primary">
+                                <i class="fas fa-save"></i> Guardar Cambios
+                            </button>
+                            <button type="button" id="cancel-edit" class="btn btn-secondary">
+                                <i class="fas fa-times"></i> Cancelar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+    <script src="js/cv-editor.js"></script>
+</body>
+</html>
