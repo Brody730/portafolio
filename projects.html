@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Proyectos | Mi Portafolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Cursor personalizado -->
+    <div class="custom-cursor"></div>
+
+    <!-- Menú de navegación -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">Mi<span>Portafolio</span></a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="index.html#about" class="nav-link">Sobre Mí</a></li>
+                <li><a href="index.html#skills" class="nav-link">Habilidades</a></li>
+                <li><a href="projects.html" class="nav-link active">Proyectos</a></li>
+                <li><a href="cv.html" class="nav-link">Mi CV</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sección de Proyectos -->
+    <section class="projects-section">
+        <div class="container">
+            <h1 class="section-title">Mis <span>Proyectos</span></h1>
+            <p class="section-subtitle">Algunos de mis trabajos recientes y destacados</p>
+            
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="app">Apps</button>
+                <button class="filter-btn" data-filter="design">Diseño</button>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Proyecto 1 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="assets/images/project1.jpg" alt="Proyecto 1">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-search"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Aplicación Web Moderna</h3>
+                        <p>Plataforma de comercio electrónico con React y Node.js</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 2 -->
+                <div class="project-card" data-category="app">
+                    <div class="project-image">
+                        <img src="assets/images/project2.jpg" alt="Proyecto 2">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-search"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>App Móvil de Productividad</h3>
+                        <p>Aplicación para gestión de tareas con React Native</p>
+                        <div class="project-tags">
+                            <span>React Native</span>
+                            <span>Firebase</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 3 -->
+                <div class="project-card" data-category="design">
+                    <div class="project-image">
+                        <img src="assets/images/project3.jpg" alt="Proyecto 3">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-search"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Diseño de Marca</h3>
+                        <p>Identidad visual para startup tecnológica</p>
+                        <div class="project-tags">
+                            <span>Illustrator</span>
+                            <span>Photoshop</span>
+                            <span>Branding</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 4 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="assets/images/project4.jpg" alt="Proyecto 4">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-search"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Portal Corporativo</h3>
+                        <p>Sitio web para empresa de servicios profesionales</p>
+                        <div class="project-tags">
+                            <span>HTML/CSS</span>
+                            <span>JavaScript</span>
+                            <span>PHP</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 5 -->
+                <div class="project-card" data-category="app">
+                    <div class="project-image">
+                        <img src="assets/images/project5.jpg" alt="Proyecto 5">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-search"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Juego Móvil</h3>
+                        <p>Juego de puzzle desarrollado con Unity</p>
+                        <div class="project-tags">
+                            <span>Unity</span>
+                            <span>C#</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 6 -->
+                <div class="project-card" data-category="design">
+                    <div class="project-image">
+                        <img src="assets/images/project6.jpg" alt="Proyecto 6">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-search"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Diseño UI/UX</h3>
+                        <p>Interfaz de usuario para aplicación bancaria</p>
+                        <div class="project-tags">
+                            <span>Figma</span>
+                            <span>UI/UX</span>
+                            <span>Prototipado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="projects-cta">
+                <p>¿Interesado en ver más proyectos o colaborar?</p>
+                <a href="index.html#contact" class="btn btn-primary">Contáctame</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+</html>
