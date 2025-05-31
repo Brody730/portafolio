@@ -105,6 +105,30 @@ function showNotification(message, type = 'success') {
 
     setTimeout(() => {
         notification.classList.add('show');
+    }, 100);
+
+    setTimeout(() => {
+        notification.classList.remove('show');
+        setTimeout(() => {
+            notification.remove();
+        }, 300);
+    }, 3000);
+}
+
+// Inicializar todas las funciones cuando el DOM esté cargado
+document.addEventListener('DOMContentLoaded', () => {
+    initMobileMenu();
+    initCustomCursor();
+    initNavbarScroll();
+    initSmoothScrolling();
+    initAnimateOnScroll();
+});
+    notification.className = `notification ${type}`;
+    notification.textContent = message;
+    document.body.appendChild(notification);
+
+    setTimeout(() => {
+        notification.classList.add('show');
     }, 10);
 
     setTimeout(() => {
