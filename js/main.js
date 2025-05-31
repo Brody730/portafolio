@@ -115,6 +115,22 @@ function showNotification(message, type = 'success') {
     }, 3000);
 }
 
+// Función para inicializar las animaciones de carga
+function initLoadAnimations() {
+    // Asegurar que todas las secciones sean visibles desde el inicio
+    document.querySelectorAll('section').forEach(section => {
+        section.style.opacity = '1';
+        section.style.transform = 'translateY(0)';
+    });
+
+    // Activar las animaciones después de un breve delay
+    setTimeout(() => {
+        document.querySelectorAll('.animate-on-load').forEach(element => {
+            element.classList.add('visible');
+        });
+    }, 100);
+}
+
 // Inicializar todas las funciones cuando el DOM esté cargado
 document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
@@ -122,30 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavbarScroll();
     initSmoothScrolling();
     initAnimateOnScroll();
-});
-    notification.className = `notification ${type}`;
-    notification.textContent = message;
-    document.body.appendChild(notification);
-
-    setTimeout(() => {
-        notification.classList.add('show');
-    }, 10);
-
-    setTimeout(() => {
-        notification.classList.remove('show');
-        setTimeout(() => {
-            document.body.removeChild(notification);
-        }, 300);
-    }, 3000);
-}
-
-// Inicialización cuando el DOM esté listo
-document.addEventListener('DOMContentLoaded', function() {
-    initMobileMenu();
-    initCustomCursor();
-    initNavbarScroll();
-    initSmoothScrolling();
-    initAnimateOnScroll();
+    initLoadAnimations();
 });
 
 // Inicialización cuando todo esté cargado
