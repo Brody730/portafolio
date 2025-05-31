@@ -12,13 +12,32 @@
 }
 
 /* Animación de entrada para secciones */
+/* Animación de entrada para secciones */
 section {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Añadir clase para animación específica */
+section.animate-on-load {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+section.animate-on-load.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animación de entrada para elementos específicos */
+.animate-on-scroll {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-section.visible {
+.animate-on-scroll.visible {
     opacity: 1;
     transform: translateY(0);
 }
