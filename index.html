@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio Profesional</title>
+    <title>Mi Portafolio | Inicio</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/page-transitions.css">
     <link rel="stylesheet" href="css/projects.css">
-    <link rel="stylesheet" href="css/contact.css">
-    <link rel="stylesheet" href="css/cv-skills.css">
-    <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/notifications.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -22,7 +19,7 @@
     <!-- Menú de navegación -->
     <nav class="navbar">
         <div class="navbar-container">
-            <a href="#" class="logo">Mi<span>Portafolio</span></a>
+            <a href="index.html" class="logo">Mi<span>Portafolio</span></a>
             <div class="menu-toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -39,10 +36,14 @@
         </div>
     </nav>
 
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section class="hero-section">
         <div class="hero-content">
-            <h1 class="hero-title animate-text">Hola, soy Cesar Jozet Cruz Ramires<span id="typed-name"></span></h1>
+            <h1 class="section-title">Hola, soy Cesar Jozet Cruz Ramires<span id="typed-name"></span></h1>
             <p class="hero-subtitle" id="typed-text"></p>
             <div class="hero-buttons">
                 <a href="cv.html" class="btn btn-primary">Ver mi CV</a>
@@ -61,7 +62,7 @@
     </section>
 
     <!-- Sobre Mí -->
-    <section id="about" class="about">
+    <section class="about-section">
         <div class="container">
             <h2 class="section-title">Sobre <span>Mí</span></h2>
             <div class="about-content">
@@ -74,7 +75,7 @@
     </section>
 
     <!-- Habilidades -->
-    <section id="skills" class="skills">
+    <section class="skills-section">
         <div class="container">
             <h2 class="section-title">Mis <span>Habilidades</span></h2>
             <div class="skills-grid">
@@ -96,26 +97,40 @@
     </section>
 
     <!-- Proyectos -->
-    <section id="projects" class="projects">
+    <section class="projects-section">
         <div class="container">
             <h2 class="section-title">Mis <span>Proyectos</span></h2>
             <div class="projects-grid">
-                <div class="project-card">
-                    <img src="images/project1.jpg" alt="Proyecto 1" onerror="this.src='https://via.placeholder.com/300x200?text=Proyecto+1'">
-                    <h3>Proyecto Destacado</h3>
-                    <p>Descripción del proyecto destacado</p>
-                    <a href="projects.html" class="btn btn-primary">Ver más</a>
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image">
+                        <img src="images/project1.jpg" alt="Proyecto Destacado" onerror="this.src='https://via.placeholder.com/300x200?text=Proyecto+1'">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="Ver en GitHub"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link" title="Ver sitio web"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Proyecto Destacado</h3>
+                        <p>Descripción del proyecto destacado</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contacto -->
-    <section id="contact" class="contact">
+    <section class="contact-section">
         <div class="container">
             <h2 class="section-title">Contáctame</h2>
             <div class="contact-content">
-                <form id="contact-form">
+                <form id="contact-form" class="animate-on-scroll">
                     <div class="form-group">
                         <input type="text" placeholder="Nombre" required>
                     </div>
