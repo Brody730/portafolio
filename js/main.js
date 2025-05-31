@@ -19,14 +19,34 @@ function initMobileMenu() {
     }
 }
 
+// Función para animar elementos al hacer scroll
+function initAnimateOnScroll() {
+    const animateOnScroll = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                animateOnScroll.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    });
+
+    // Observar elementos animables
+    document.querySelectorAll('.animate-on-scroll').forEach(element => {
+        animateOnScroll.observe(element);
+    });
+}
+
 // Función para inicializar el cursor personalizado
 function initCustomCursor() {
     const cursor = document.querySelector('.custom-cursor');
     if (!cursor) return;
 
     document.addEventListener('mousemove', (e) => {
-        cursor.style.left = `${e.clientX}px`;
-        cursor.style.top = `${e.clientY}px`;
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
     });
 
     // Efecto hover
@@ -76,51 +96,6 @@ function initSmoothScrolling() {
     });
 }
 
-// Función para inicializar ScrollReveal
-function initScrollReveal() {
-    if (typeof ScrollReveal !== 'undefined') {
-        const sr = ScrollReveal({
-            origin: 'bottom',
-            distance: '60px',
-            duration: 1000,
-            delay: 200,
-            reset: true
-        });
-
-        sr.reveal('.animate-text', { delay: 300 });
-        sr.reveal('.animate-item', { interval: 200 });
-        sr.reveal('.animate-fade', { opacity: 0, interval: 200 });
-    } else {
-        // Cargar ScrollReveal dinámicamente si no está disponible
-        const script = document.createElement('script');
-        script.src = 'https://unpkg.com/scrollreveal';
-        script.onload = initScrollReveal;
-        document.head.appendChild(script);
-    }
-}
-
-// Función para inicializar Typed.js si es necesario
-function initTypedJS() {
-    const typedElements = document.querySelectorAll('[data-typed]');
-    
-    if (typedElements.length > 0 && typeof Typed === 'undefined') {
-        const script = document.createElement('script');
-        script.src = 'https://cdn.jsdelivr.net/npm/typed.js@2.0.12';
-        script.onload = () => {
-            typedElements.forEach(el => {
-                const options = JSON.parse(el.getAttribute('data-typed-options') || {};
-                new Typed(el, options);
-            });
-        };
-        document.head.appendChild(script);
-    } else if (typeof Typed !== 'undefined') {
-        typedElements.forEach(el => {
-            const options = JSON.parse(el.getAttribute('data-typed-options') || {};
-            new Typed(el, options);
-        });
-    }
-}
-
 // Función para mostrar notificaciones
 function showNotification(message, type = 'success') {
     const notification = document.createElement('div');
@@ -146,8 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initCustomCursor();
     initNavbarScroll();
     initSmoothScrolling();
-    initScrollReveal();
-    initTypedJS();
+    initAnimateOnScroll();
 });
 
 // Inicialización cuando todo esté cargado
