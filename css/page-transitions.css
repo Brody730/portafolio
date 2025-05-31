@@ -1,0 +1,138 @@
+/* Animaciones de transición entre páginas */
+.page-transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Animación de entrada para secciones */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animación de scroll */
+.scroll-down {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+    cursor: pointer;
+    animation: bounce 2s infinite;
+}
+
+.scroll-down span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3px;
+    height: 3px;
+    background: white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: scroll-indicator 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+}
+
+@keyframes scroll-indicator {
+    0%, 100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+}
+
+/* Animación de texto tipado */
+.typed-text {
+    position: relative;
+    display: inline-block;
+}
+
+.typed-text::after {
+    content: '|';
+    margin-left: 5px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* Animación de elementos al hacer scroll */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animación de elementos que aparecen desde los lados */
+.from-left {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.from-right {
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+.from-left.visible,
+.from-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Animación de elementos que rotan */
+.rotate-in {
+    opacity: 0;
+    transform: rotateY(-90deg);
+}
+
+.rotate-in.visible {
+    opacity: 1;
+    transform: rotateY(0);
+}
+
+/* Animación de elementos que escalan */
+.scale-in {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.scale-in.visible {
+    opacity: 1;
+    transform: scale(1);
+}
