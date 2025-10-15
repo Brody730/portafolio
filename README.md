@@ -19,11 +19,17 @@ Este sitio fue creado como un proyecto personal para:
 - Tener un espacio digital que funcione como carta de presentación
 - Presentar mi currículum de forma editable y accesible desde cualquier dispositivo
 
+## 📋 Uso del repositorio
+
+- El código está disponible para referencia y aprendizaje. No reutilices textos, imágenes ni datos personales sin autorización.
+- Si clonas o reutilizas el proyecto (excluyendo la información personal), agrégate en `humans.txt` dentro de la sección **Usuarios Autorizados** y mantén al creador como primera entrada.
+- Cualquier publicación o demo basada en este repositorio debe atribuir claramente a Cesar Jozet Cruz Ramirez y enlazar a este repositorio.
+
 ## 🚫 Licencia
 
-Este proyecto es **personal y no está disponible para uso o modificación por terceros**.
+Este proyecto se distribuye bajo la **Licencia de Uso Personalizada — Portafolio de Cesar Jozet Cruz Ramirez**.
 
-Licencia: [Creative Commons BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+Lee el archivo [LICENSE](LICENSE) para conocer los permisos, condiciones y restricciones vigentes.
 
 ---
 

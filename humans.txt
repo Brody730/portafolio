@@ -1,0 +1,29 @@
+/*--------------------------------------------------------------*
+ | humans.txt — Portafolio de Cesar Jozet Cruz Ramirez          |
+ | Visita: https://github.com/Brody730/portafolio               |
+ *--------------------------------------------------------------*/
+
+CREADOR PRINCIPAL
+  • Cesar Jozet Cruz Ramirez
+    › Rol: Diseñador y desarrollador original del portafolio
+    › Contacto: imbestseth@gmail.com
+    › Ubicación: Querétaro, México
+
+--------------------------------------------------------------
+USUARIOS AUTORIZADOS
+  • (Añade tu nombre aquí)
+    › Rol: Usuario invitado
+    › Fecha de acceso: AAAA-MM-DD
+    › Notas: Indica brevemente para qué usarás el código
+
+  • (Siguiente usuario)
+    › …
+
+--------------------------------------------------------------
+NORMAS RÁPIDAS
+  1. Respeta al creador: su nombre permanece arriba y sin modificaciones.
+  2. No copies información personal (textos, imágenes, datos de contacto).
+  3. Declara tu objetivo; si cambia, actualiza tu entrada.
+  4. Contribuye con responsabilidad: cualquier mejora propuesta debe mantener la estética original.
+
+Gracias por construir con transparencia. ❤️
