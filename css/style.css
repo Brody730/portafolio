@@ -222,6 +222,14 @@ section {
     flex-wrap: wrap;
 }
 
+.skills-section .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 32px auto 0;
+    padding: 0.9rem 2rem;
+}
+
 .skill-card {
     background: white;
     padding: 1.5rem;
@@ -245,4 +253,60 @@ section {
 
 .contact-section {
     background: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, rgba(37, 99, 235, 0.02) 100%);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    section {
+        padding: 80px 0;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2.3rem;
+    }
+
+    .skills-grid {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 70px 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .hero-section .hero-buttons {
+        justify-content: center;
+    }
+
+    .skills-grid {
+        justify-content: center;
+    }
+
+    .skill-card {
+        width: min(100%, 260px);
+    }
+
+}
+
+@media (max-width: 520px) {
+    .container {
+        padding: 0 1.25rem;
+    }
+
+    .section-title {
+        font-size: 1.85rem;
+    }
+
+    .hero-section .hero-title {
+        font-size: 2.2rem;
+    }
 }
