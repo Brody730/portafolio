@@ -37,25 +37,10 @@
     </nav>
 
     <!-- Sección de CV -->
-    <section class="cv-section animate-on-load">
+    <section class="cv-page animate-on-load">
         <div class="cv-container">
             <h1 class="section-title">Mi <span>Curriculum</span></h1>
-            <p class="section-subtitle">Explora mi información profesional</p>
-           
-            <!--     necesitas habilitar esto con un backend sencillo      -->
-          <!-- <div class="cv-actions">
-                <button id="upload-cv" class="btn btn-primary">
-                    <i class="fas fa-upload"></i> Subir CV
-                </button>
-                <button id="edit-cv" class="btn btn-secondary">
-                    <i class="fas fa-edit"></i> Editar CV
-                </button>
-                <button id="download-cv" class="btn btn-accent">
-                    <i class="fas fa-download"></i> Descargar PDF
-                </button>
-                <input type="file" id="cv-file-input" accept=".pdf,.doc,.docx" style="display: none;">
-            </div>  -->
-
+            <p class="section-subtitle">Explora mi información profesional y descubre cómo puedo aportar valor a tu equipo</p>
             <div class="cv-actions">
                 <a href="assets/pdfs/CV_CruzRamirezCesarJozet.pdf" download="JozetRamirezCruz-CV.pdf" class="btn btn-accent">
                     <i class="fas fa-download"></i> Descargar PDF
@@ -69,58 +54,73 @@
                         <div class="cv-header">
                             <div class="cv-photo">
                                 <img src="images/profile.jpg" alt="Foto de perfil" id="cv-profile-img" onerror="this.src='https://via.placeholder.com/200x200?text=Foto+de+Perfil'">
-                                <button class="change-photo-btn">Cambiar foto</button>
-                                <input type="file" id="profile-img-input" accept="image/*" style="display: none;">
                             </div>
                             <div class="cv-info">
                                 <h1 id="cv-name">Cesar Jozet Cruz Ramirez</h1>
-                                <h2 id="cv-title">Ing. en software y sistemas computacionales</h2>
+                                <h2 id="cv-title" class="cv-role">Ing. en software y sistemas computacionales</h2>
                                 <div class="cv-contact">
-                                    <p><i class="fas fa-envelope"></i> <span id="cv-email">imbestseth@gmail.com</span></p>
-                                    <p><i class="fas fa-phone"></i> <span id="cv-phone">+52 7831120027</span></p>
-                                    <p><i class="fas fa-map-marker-alt"></i> <span id="cv-location">Queretaro, Mexico</span></p>
-                                    <p><i class="fab fa-linkedin-in"></i> <a href="https://www.linkedin.com/in/jozetramirez" target="_blank">LinkedIn</a></p>
-                                    <p><i class="fas fa-link"></i> <span id="cv-website">nowebsitenow</span></p>
+                                    <a class="cv-contact-item" href="mailto:imbestseth@gmail.com">
+                                        <i class="fas fa-envelope"></i>
+                                        <span id="cv-email">imbestseth@gmail.com</span>
+                                    </a>
+                                    <a class="cv-contact-item" href="tel:+527831120027">
+                                        <i class="fas fa-phone"></i>
+                                        <span id="cv-phone">+52 7831120027</span>
+                                    </a>
+                                    <div class="cv-contact-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span id="cv-location">Queretaro, Mexico</span>
+                                    </div>
+                                    <a class="cv-contact-item" href="https://www.linkedin.com/in/jozetramirez" target="_blank" rel="noreferrer">
+                                        <i class="fab fa-linkedin-in"></i>
+                                        <span>LinkedIn</span>
+                                    </a>
+                                    <div class="cv-contact-item">
+                                        <i class="fas fa-link"></i>
+                                        <span id="cv-website">nowebsitenow</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="cv-body">
-                            <div class="cv-left">
-                                <section class="cv-section">
+                            <div class="cv-column">
+                                <article class="cv-card">
                                     <h3><i class="fas fa-user"></i> Sobre Mí</h3>
                                     <p id="cv-about">Soy estudiante de Ingeniería en Software, con experiencia práctica en entornos empresariales usando Unix, bases de datos, SQL y AWS. Actualmente realizo prácticas en Tralix México, fortaleciendo mis habilidades en sistemas robustos y escalables. He trabajado como programador en CFE, desarrollando con PHP y Bootstrap, y administrando servidores Ubuntu. También brindé soporte técnico y desarrollé una web institucional en CEB 5/13. Me enfoco en la innovación, el trabajo en equipo y la mejora continua, respaldado por certificaciones en plataformas como LinkedIn Learning, Pluralsight y HubSpot. Busco integrarme a proyectos donde pueda aportar soluciones técnicas eficientes y seguir creciendo profesionalmente.</p>
-                                </section>
-                                
-                                <section class="cv-section">
+                                </article>
+
+                                <article class="cv-card">
                                     <h3><i class="fas fa-briefcase"></i> Experiencia Laboral</h3>
-                                    <div id="cv-experience">
-                                        <!-- Experiencias se agregarán dinámicamente -->
-                                        <div class="experience-item">
-                                            <h4>Programador</h4>
-                                            <h5>CFE</h5>
-                                            <div class="cv-date">septiembre 2024 - diciembre 2024</div>
-                                            <p>Desarrollé con PHP y Bootstrap, y administrando servidores Ubuntu.</p>
+                                    <div class="timeline" id="cv-experience">
+                                        <div class="timeline-item">
+                                            <span class="timeline-marker"></span>
+                                            <div class="timeline-content">
+                                                <span class="cv-date">Septiembre 2024 - Diciembre 2024</span>
+                                                <h4>Programador <span>· CFE</span></h4>
+                                                <p>Desarrollé con PHP y Bootstrap, administrando servidores Ubuntu.</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </section>
+                                </article>
                             </div>
-                            
-                            <div class="cv-right">
-                                <section class="cv-section">
+
+                            <div class="cv-column">
+                                <article class="cv-card">
                                     <h3><i class="fas fa-graduation-cap"></i> Educación</h3>
-                                    <div id="cv-education">
-                                        <!-- Educación se agregará dinámicamente -->
-                                        <div class="education-item">
-                                            <h4>Ing. en Software y Sistemas Computacionales</h4>
-                                            <h5>Universidad Interamericana para el Desarrollo</h5>
-                                            <div class="cv-date">2022 - 2025</div>
-                                            <p><i class="fas fa-user"></i> Cesar Jozet Cruz Ramirez</p>
+                                    <div class="timeline" id="cv-education">
+                                        <div class="timeline-item">
+                                            <span class="timeline-marker"></span>
+                                            <div class="timeline-content">
+                                                <span class="cv-date">2022 - 2025</span>
+                                                <h4>Ing. en Software y Sistemas Computacionales</h4>
+                                                <p>Universidad Interamericana para el Desarrollo</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </section>
-                                
-                                <section class="cv-section">
+                                </article>
+
+                                <article class="cv-card">
                                     <h3><i class="fas fa-code"></i> Habilidades</h3>
                                     <div class="skills-preview">
                                         <div class="preview-item">
@@ -167,110 +167,29 @@
                                     <a href="skills.html" class="view-all-btn">
                                         <i class="fas fa-arrow-right"></i> Ver todas las habilidades
                                     </a>
-                                </section>
-                                
-                                <section class="cv-section">
+                                </article>
+
+                                <article class="cv-card">
                                     <h3><i class="fas fa-certificate"></i> Certificaciones</h3>
-                                    <div id="cv-certifications">
-                                        <!-- Certificaciones se agregarán dinámicamente -->
-                                        <div class="certification-item">
-                                            <h4>Nombre de la Certificación</h4>
-                                            <h5>Institución</h5>
-                                            <div class="cv-date">Fecha de obtención</div>
+                                    <div class="timeline" id="cv-certifications">
+                                        <div class="timeline-item">
+                                            <span class="timeline-marker"></span>
+                                            <div class="timeline-content">
+                                                <span class="cv-date">En progreso</span>
+                                                <h4>Nombre de la Certificación</h4>
+                                                <p>Institución</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </section>
+                                </article>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Panel de edición (inicialmente oculto) -->
-                <div class="cv-editor" id="cv-editor-panel">
-                    <h2><i class="fas fa-edit"></i> Editor de CV</h2>
-                    
-                    <form id="cv-form">
-                        <div class="form-section">
-                            <h3>Información Básica</h3>
-                            <div class="form-group">
-                                <label for="edit-name">Nombre Completo</label>
-                                <input type="text" id="edit-name" placeholder="Tu nombre completo">
-                            </div>
-                            <div class="form-group">
-                                <label for="edit-title">Título Profesional</label>
-                                <input type="text" id="edit-title" placeholder="Tu profesión o especialidad">
-                            </div>
-                            <div class="form-group">
-                                <label for="edit-about">Sobre Mí</label>
-                                <textarea id="edit-about" rows="4" placeholder="Breve descripción sobre ti"></textarea>
-                            </div>
-                        </div>
-                        
-                        <div class="form-section">
-                            <h3>Información de Contacto</h3>
-                            <div class="form-group">
-                                <label for="edit-email">Email</label>
-                                <input type="email" id="edit-email" placeholder="tu@email.com">
-                            </div>
-                            <div class="form-group">
-                                <label for="edit-phone">Teléfono</label>
-                                <input type="tel" id="edit-phone" placeholder="+123 456 7890">
-                            </div>
-                            <div class="form-group">
-                                <label for="edit-location">Ubicación</label>
-                                <input type="text" id="edit-location" placeholder="Ciudad, País">
-                            </div>
-                            <div class="form-group">
-                                <label for="edit-website">Sitio Web</label>
-                                <input type="url" id="edit-website" placeholder="https://tusitio.com">
-                            </div>
-                        </div>
-                        
-                        <div class="form-section">
-                            <h3>Experiencia Laboral</h3>
-                            <div id="edit-experience-container">
-                                <!-- Experiencias editables se agregarán aquí -->
-                            </div>
-                            <button type="button" id="add-experience" class="btn btn-small">
-                                <i class="fas fa-plus"></i> Agregar Experiencia
-                            </button>
-                        </div>
-                        
-                        <div class="form-section">
-                            <h3>Educación</h3>
-                            <div id="edit-education-container">
-                                <!-- Educación editable se agregará aquí -->
-                            </div>
-                            <button type="button" id="add-education" class="btn btn-small">
-                                <i class="fas fa-plus"></i> Agregar Educación
-                            </button>
-                        </div>
-                        
-                        <div class="form-section">
-                            <h3>Habilidades</h3>
-                            <div id="edit-skills-container">
-                                <!-- Habilidades editables se agregarán aquí -->
-                            </div>
-                            <button type="button" id="add-skill" class="btn btn-small">
-                                <i class="fas fa-plus"></i> Agregar Habilidad
-                            </button>
-                        </div>
-                        
-                        <div class="form-actions">
-                            <button type="button" id="save-cv" class="btn btn-primary">
-                                <i class="fas fa-save"></i> Guardar Cambios
-                            </button>
-                            <button type="button" id="cancel-edit" class="btn btn-secondary">
-                                <i class="fas fa-times"></i> Cancelar
-                            </button>
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>
     </section>
 
     <script src="js/main.js"></script>
-    <script src="js/cv-editor.js"></script>
 </body>
 </html>
