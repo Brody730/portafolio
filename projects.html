@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/page-transitions.css">
     <link rel="stylesheet" href="css/projects.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <!-- Cursor personalizado -->
@@ -35,30 +35,23 @@
         </div>
     </nav>
 
-    <!-- Scripts -->
-    <script src="js/projects.js"></script>
-    <script src="js/navigation.js"></script>
-
     <!-- Sección de Proyectos -->
     <section class="projects-section">
         <div class="container">
             <h1 class="section-title">Mis <span>Proyectos</span></h1>
-            
-            <!-- Filtros de proyectos -->
+            <p class="section-subtitle">Algunos de mis trabajos recientes y destacados</p>
+
             <div class="projects-filter">
                 <button class="filter-btn active" data-filter="all">Todos</button>
                 <button class="filter-btn" data-filter="web">Web</button>
-                <button class="filter-btn" data-filter="mobile">Móvil</button>
-                <button class="filter-btn" data-filter="desktop">Desktop</button>
-                <button class="filter-btn" data-filter="ui-ux">UI/UX</button>
+                <button class="filter-btn" data-filter="app">Apps</button>
+                <button class="filter-btn" data-filter="design">Diseño</button>
             </div>
 
-            <!-- Grid de proyectos -->
             <div class="projects-grid">
-                <!-- Proyecto 1 -->
                 <div class="project-card animate-on-scroll" data-category="web">
                     <div class="project-image">
-                        <img src="images/project1.jpg" alt="Proyecto 1" onerror="this.src='https://via.placeholder.com/300x200?text=No+Image'">
+                        <img src="https://via.placeholder.com/600x400?text=Proyecto+Web+1" alt="Aplicación Web Moderna" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="#" class="project-link" title="Ver en GitHub"><i class="fab fa-github"></i></a>
@@ -67,20 +60,19 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Nombre del Proyecto 1</h3>
-                        <p>Descripción breve del proyecto 1.</p>
+                        <h3>Aplicación Web Moderna</h3>
+                        <p>Plataforma de comercio electrónico construida con React y Node.js.</p>
                         <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Proyecto 2 -->
-                <div class="project-card animate-on-scroll" data-category="mobile">
+                <div class="project-card animate-on-scroll" data-category="app">
                     <div class="project-image">
-                        <img src="images/project2.jpg" alt="Proyecto 2" onerror="this.src='https://via.placeholder.com/300x200?text=No+Image'">
+                        <img src="https://via.placeholder.com/600x400?text=App+M%C3%B3vil" alt="App Móvil de Productividad" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="#" class="project-link" title="Ver en GitHub"><i class="fab fa-github"></i></a>
@@ -89,117 +81,49 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Nombre del Proyecto 2</h3>
-                        <p>Descripción breve del proyecto 2.</p>
-                        <div class="project-tags">
-                            <span class="tag">React Native</span>
-                            <span class="tag">Firebase</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Puedes agregar más proyectos aquí -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Scripts -->
-    <script src="js/projects.js"></script>
-    <script src="js/navigation.js"></script>
-</body>
-</html>
-    <section class="projects-section">
-        <div class="container">
-            <h1 class="section-title">Mis <span>Proyectos</span></h1>
-            <p class="section-subtitle">Algunos de mis trabajos recientes y destacados</p>
-            
-            <div class="projects-filter">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="web">Web</button>
-                <button class="filter-btn" data-filter="app">Apps</button>
-                <button class="filter-btn" data-filter="design">Diseño</button>
-            </div>
-            
-            <div class="projects-grid">
-                <!-- Proyecto 1 -->
-                <div class="project-card" data-category="web">
-                    <div class="project-image">
-                        <img src="assets/images/project1.jpg" alt="Proyecto 1">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
-                                <a href="#" class="project-link"><i class="fas fa-search"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Aplicación Web Moderna</h3>
-                        <p>Plataforma de comercio electrónico con React y Node.js</p>
-                        <div class="project-tags">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Proyecto 2 -->
-                <div class="project-card" data-category="app">
-                    <div class="project-image">
-                        <img src="assets/images/project2.jpg" alt="Proyecto 2">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
-                                <a href="#" class="project-link"><i class="fas fa-search"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
                         <h3>App Móvil de Productividad</h3>
-                        <p>Aplicación para gestión de tareas con React Native</p>
+                        <p>Aplicación para gestión de tareas y objetivos en tiempo real.</p>
                         <div class="project-tags">
                             <span>React Native</span>
                             <span>Firebase</span>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Proyecto 3 -->
-                <div class="project-card" data-category="design">
+
+                <div class="project-card animate-on-scroll" data-category="design">
                     <div class="project-image">
-                        <img src="assets/images/project3.jpg" alt="Proyecto 3">
+                        <img src="https://via.placeholder.com/600x400?text=UI+%26+UX" alt="Diseño de Marca" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
-                                <a href="#" class="project-link"><i class="fas fa-search"></i></a>
+                                <a href="#" class="project-link" title="Caso de estudio"><i class="fas fa-file-alt"></i></a>
+                                <a href="#" class="project-link" title="Ver prototipo"><i class="fas fa-search"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="project-info">
                         <h3>Diseño de Marca</h3>
-                        <p>Identidad visual para startup tecnológica</p>
+                        <p>Identidad visual completa para una startup tecnológica.</p>
                         <div class="project-tags">
+                            <span>Figma</span>
                             <span>Illustrator</span>
-                            <span>Photoshop</span>
                             <span>Branding</span>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Proyecto 4 -->
-                <div class="project-card" data-category="web">
+
+                <div class="project-card animate-on-scroll" data-category="web">
                     <div class="project-image">
-                        <img src="assets/images/project4.jpg" alt="Proyecto 4">
+                        <img src="https://via.placeholder.com/600x400?text=Portal+Corporativo" alt="Portal Corporativo" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
-                                <a href="#" class="project-link"><i class="fas fa-search"></i></a>
+                                <a href="#" class="project-link" title="Ver en GitHub"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link" title="Ver sitio web"><i class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="project-info">
                         <h3>Portal Corporativo</h3>
-                        <p>Sitio web para empresa de servicios profesionales</p>
+                        <p>Sitio web institucional con panel de administración personalizado.</p>
                         <div class="project-tags">
                             <span>HTML/CSS</span>
                             <span>JavaScript</span>
@@ -207,59 +131,52 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- Proyecto 5 -->
-                <div class="project-card" data-category="app">
+
+                <div class="project-card animate-on-scroll" data-category="app">
                     <div class="project-image">
-                        <img src="assets/images/project5.jpg" alt="Proyecto 5">
+                        <img src="https://via.placeholder.com/600x400?text=Juego+M%C3%B3vil" alt="Juego móvil" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
-                                <a href="#" class="project-link"><i class="fas fa-search"></i></a>
+                                <a href="#" class="project-link" title="Ver gameplay"><i class="fas fa-play"></i></a>
+                                <a href="#" class="project-link" title="Descargar"><i class="fas fa-download"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="project-info">
                         <h3>Juego Móvil</h3>
-                        <p>Juego de puzzle desarrollado con Unity</p>
+                        <p>Puzzle casual desarrollado con Unity y monetización integrada.</p>
                         <div class="project-tags">
                             <span>Unity</span>
                             <span>C#</span>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Proyecto 6 -->
-                <div class="project-card" data-category="design">
+
+                <div class="project-card animate-on-scroll" data-category="design">
                     <div class="project-image">
-                        <img src="assets/images/project6.jpg" alt="Proyecto 6">
+                        <img src="https://via.placeholder.com/600x400?text=Dashboard" alt="Dashboard Analítico" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-link"></i></a>
-                                <a href="#" class="project-link"><i class="fas fa-search"></i></a>
+                                <a href="#" class="project-link" title="Ver prototipo"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="project-link" title="Descargar"><i class="fas fa-download"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Diseño UI/UX</h3>
-                        <p>Interfaz de usuario para aplicación bancaria</p>
+                        <h3>Dashboard Analítico</h3>
+                        <p>Diseño de panel con foco en visualización de datos e insights.</p>
                         <div class="project-tags">
-                            <span>Figma</span>
-                            <span>UI/UX</span>
-                            <span>Prototipado</span>
+                            <span>UX Research</span>
+                            <span>Data Viz</span>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="projects-cta">
-                <p>¿Interesado en ver más proyectos o colaborar?</p>
-                <a href="index.html#contact" class="btn btn-primary">Contáctame</a>
             </div>
         </div>
     </section>
 
     <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
     <script src="js/projects.js"></script>
 </body>
 </html>
