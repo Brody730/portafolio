@@ -12,18 +12,12 @@
 .about-container {
     display: grid;
     grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-<<<<<<< ours
-    column-gap: 3rem;
-    row-gap: 3rem;
+    gap: 3rem;
     align-items: start;
     grid-template-areas:
         "text image"
         "stats stats"
         "interests interests";
-=======
-    gap: 3rem;
-    align-items: stretch;
->>>>>>> theirs
 }
 
 .about-content {
@@ -49,11 +43,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 1.5rem;
-<<<<<<< ours
     width: 100%;
     align-items: stretch;
-=======
->>>>>>> theirs
 }
 
 .stat-item {
@@ -284,15 +275,12 @@
 @media (max-width: 1024px) {
     .about-container {
         grid-template-columns: 1fr;
-<<<<<<< ours
         row-gap: 2.5rem;
         grid-template-areas:
             "image"
             "text"
             "stats"
             "interests";
-=======
->>>>>>> theirs
     }
 
     .about-image {

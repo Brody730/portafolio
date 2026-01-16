@@ -38,12 +38,19 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero-section" id="inicio">
         <div class="hero-content">
             <h1 class="section-title">Hola, soy Jozet Ramirez<span id="typed-name"></span></h1>
             <p class="hero-subtitle" id="typed-text"></p>
+            <p class="hero-tagline">Desarrollador web enfocado en crear experiencias digitales rápidas, accesibles y centradas en el usuario.</p>
+            <div class="hero-highlights">
+                <span class="highlight-tag"><i class="fas fa-bolt"></i> Performance</span>
+                <span class="highlight-tag"><i class="fas fa-layer-group"></i> UI moderna</span>
+                <span class="highlight-tag"><i class="fas fa-handshake"></i> Trabajo en equipo</span>
+            </div>
             <div class="hero-buttons">
                 <a href="cv.html" class="btn btn-primary"><i class="fas fa-file-alt"></i> Ver mi CV</a>
+                <a href="#projects" class="btn btn-secondary"><i class="fas fa-briefcase"></i> Ver proyectos</a>
                 <a href="contact.html" class="btn btn-secondary"><i class="fas fa-envelope"></i> Contáctame</a>
             </div>
         </div>
@@ -59,12 +66,31 @@
     </section>
 
     <!-- Sobre Mí -->
-    <section class="about-section">
+    <section class="about-section" id="sobre-mi">
         <div class="container">
             <h2 class="section-title">Sobre <span>Mí</span></h2>
             <div class="about-content">
                 <div class="about-text">
                     <p>Soy un desarrollador web apasionado con experiencia en tecnologías modernas. Me encanta crear soluciones innovadoras y trabajar en proyectos desafiantes.</p>
+                    <ul class="about-list">
+                        <li><i class="fas fa-check-circle"></i> +12 proyectos publicados para clientes y proyectos personales.</li>
+                        <li><i class="fas fa-check-circle"></i> Experiencia creando landing pages con foco en conversión.</li>
+                        <li><i class="fas fa-check-circle"></i> Integraciones con APIs y automatización de procesos.</li>
+                    </ul>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h3>Proyectos</h3>
+                            <p>12+</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>Clientes</h3>
+                            <p>8+</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>Años</h3>
+                            <p>3+</p>
+                        </div>
+                    </div>
                     <a href="about.html" class="btn btn-primary">Conoce más</a>
                 </div>
             </div>
@@ -72,60 +98,241 @@
     </section>
 
     <!-- Habilidades -->
-    <section class="skills-section">
+    <section class="skills-section" id="habilidades">
         <div class="container">
-            <h2 class="section-title">Mis <span>Habilidades</span></h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <i class="fab fa-html5"></i>
-                    <h3>HTML5</h3>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-css3-alt"></i>
-                    <h3>CSS3</h3>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-js"></i>
-                    <h3>JavaScript</h3>
-                </div>
+            <h2 class="section-title">Stack <span>Principal</span></h2>
+            <p class="section-subtitle">Tecnologías y niveles que uso para crear experiencias sólidas de front y back.</p>
+            <div class="skills-overview">
+                <article class="skill-category-card">
+                    <h3><i class="fas fa-code"></i> Front-end</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge">HTML5 · Avanzado</span>
+                        <span class="skill-badge">CSS3 · Avanzado</span>
+                        <span class="skill-badge">JavaScript · Avanzado</span>
+                        <span class="skill-badge">React · Intermedio</span>
+                    </div>
+                </article>
+                <article class="skill-category-card">
+                    <h3><i class="fas fa-server"></i> Back-end</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge">Node.js · Intermedio</span>
+                        <span class="skill-badge">PHP · Intermedio</span>
+                        <span class="skill-badge">Python · Intermedio</span>
+                        <span class="skill-badge">MongoDB · Intermedio</span>
+                    </div>
+                </article>
+                <article class="skill-category-card">
+                    <h3><i class="fas fa-toolbox"></i> Herramientas</h3>
+                    <div class="skill-badges">
+                        <span class="skill-badge">Git · Avanzado</span>
+                        <span class="skill-badge">Docker · Básico</span>
+                        <span class="skill-badge">Figma · Intermedio</span>
+                        <span class="skill-badge">Postman · Intermedio</span>
+                    </div>
+                </article>
             </div>
             <a href="skills.html" class="btn btn-primary">Ver todas</a>
         </div>
     </section>
 
     <!-- Proyectos -->
-    <section class="projects-section">
+    <section class="projects-section" id="projects">
         <div class="container">
             <h2 class="section-title">Mis <span>Proyectos</span></h2>
+            <p class="section-subtitle">Una selección de trabajos recientes con impacto real en negocio y usuarios.</p>
             <div class="projects-grid">
                 <div class="project-card animate-on-scroll">
                     <div class="project-image">
-                        <img src="images/project1.jpg" alt="Proyecto Destacado" onerror="this.src='https://via.placeholder.com/300x200?text=Proyecto+1'">
+                        <img src="https://via.placeholder.com/600x400?text=Proyecto+Destacado" alt="Plataforma de gestión de pedidos" loading="lazy">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="#" class="project-link" title="Ver en GitHub"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/Brody730" class="project-link" title="Ver en GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
                                 <a href="#" class="project-link" title="Ver sitio web"><i class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Proyecto Destacado</h3>
-                        <p>Descripción del proyecto destacado</p>
+                        <h3>Plataforma de gestión de pedidos</h3>
+                        <p>Dashboard para operaciones diarias con métricas en tiempo real y automatización de reportes.</p>
+                        <p class="project-role"><strong>Rol:</strong> Front-end + integración API</p>
                         <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
                         </div>
                     </div>
                 </div>
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400?text=Landing+Page" alt="Landing de lanzamiento" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Brody730" class="project-link" title="Ver en GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link" title="Ver sitio web"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Landing de lanzamiento</h3>
+                        <p>Landing optimizada con CTA claros y pruebas A/B para mejorar conversión.</p>
+                        <p class="project-role"><strong>Rol:</strong> Diseño UI + implementación</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">Analytics</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400?text=CRM+Ventas" alt="CRM para ventas" loading="lazy">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Brody730" class="project-link" title="Ver en GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link" title="Ver demo"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>CRM para ventas</h3>
+                        <p>Pipeline de ventas con reportes automáticos y roles por equipo.</p>
+                        <p class="project-role"><strong>Rol:</strong> Back-end + UI</p>
+                        <div class="project-tags">
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-cta">
+                <a href="projects.html" class="btn btn-primary">Ver todos los proyectos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proceso de trabajo -->
+    <section class="process-section section-muted">
+        <div class="container">
+            <h2 class="section-title">Proceso de <span>Trabajo</span></h2>
+            <p class="section-subtitle">Una metodología clara para entregar resultados consistentes.</p>
+            <div class="process-grid">
+                <article class="process-card animate-on-scroll">
+                    <span class="process-step">01</span>
+                    <h3>Descubrimiento</h3>
+                    <p>Analizo objetivos, usuarios y métricas para alinear el proyecto con el negocio.</p>
+                </article>
+                <article class="process-card animate-on-scroll">
+                    <span class="process-step">02</span>
+                    <h3>Diseño</h3>
+                    <p>Creo wireframes y UI enfocada en conversión y accesibilidad.</p>
+                </article>
+                <article class="process-card animate-on-scroll">
+                    <span class="process-step">03</span>
+                    <h3>Implementación</h3>
+                    <p>Desarrollo con buenas prácticas, pruebas y optimizaciones de rendimiento.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech stack favorito -->
+    <section class="tech-stack-section">
+        <div class="container">
+            <h2 class="section-title">Tech <span>Stack</span></h2>
+            <p class="section-subtitle">Herramientas favoritas para diseñar, construir y entregar productos digitales.</p>
+            <div class="tech-grid">
+                <div class="tech-card"><i class="fab fa-react"></i>React</div>
+                <div class="tech-card"><i class="fab fa-node-js"></i>Node.js</div>
+                <div class="tech-card"><i class="fab fa-figma"></i>Figma</div>
+                <div class="tech-card"><i class="fab fa-git-alt"></i>Git</div>
+                <div class="tech-card"><i class="fas fa-database"></i>MongoDB</div>
+                <div class="tech-card"><i class="fas fa-cloud"></i>Vercel</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logros -->
+    <section class="achievements-section section-muted">
+        <div class="container">
+            <h2 class="section-title">Logros y <span>Certificaciones</span></h2>
+            <div class="achievement-grid">
+                <article class="achievement-card animate-on-scroll">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Hackathon local</h3>
+                    <p>Top 3 en reto de innovación con una app de reservas.</p>
+                </article>
+                <article class="achievement-card animate-on-scroll">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Certificación Front-end</h3>
+                    <p>Responsive Web Design, FreeCodeCamp.</p>
+                </article>
+                <article class="achievement-card animate-on-scroll">
+                    <i class="fas fa-star"></i>
+                    <h3>+50% de conversión</h3>
+                    <p>Optimización de landing para campaña de marketing.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">Lo que dicen <span>Clientes</span></h2>
+            <div class="testimonials-grid">
+                <article class="testimonial-card animate-on-scroll">
+                    <p>“Jozet mejoró nuestra landing y duplicó los leads en 3 semanas.”</p>
+                    <h3>María López</h3>
+                    <span>Marketing Lead</span>
+                </article>
+                <article class="testimonial-card animate-on-scroll">
+                    <p>“Entrega rápida, comunicación clara y excelente calidad.”</p>
+                    <h3>Carlos Pérez</h3>
+                    <span>CEO Startup</span>
+                </article>
+                <article class="testimonial-card animate-on-scroll">
+                    <p>“Una web moderna que refleja perfecto nuestra marca.”</p>
+                    <h3>Andrea Ruiz</h3>
+                    <span>Product Manager</span>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog / Notas -->
+    <section class="blog-section section-muted">
+        <div class="container">
+            <h2 class="section-title">Notas <span>Recientes</span></h2>
+            <p class="section-subtitle">Artículos cortos sobre diseño, rendimiento y desarrollo web.</p>
+            <div class="blog-grid">
+                <article class="blog-card animate-on-scroll">
+                    <span class="blog-tag">Performance</span>
+                    <h3>Cómo optimizo el tiempo de carga en proyectos reales</h3>
+                    <p>Checklist de mejoras rápidas para acelerar tu sitio.</p>
+                    <a href="#" class="blog-link">Leer más</a>
+                </article>
+                <article class="blog-card animate-on-scroll">
+                    <span class="blog-tag">UI/UX</span>
+                    <h3>Microinteracciones que mejoran la conversión</h3>
+                    <p>Pequeños detalles que cambian la experiencia del usuario.</p>
+                    <a href="#" class="blog-link">Leer más</a>
+                </article>
+                <article class="blog-card animate-on-scroll">
+                    <span class="blog-tag">Dev</span>
+                    <h3>Cómo estructuro proyectos escalables</h3>
+                    <p>Patrones y prácticas que aplico en cada entrega.</p>
+                    <a href="#" class="blog-link">Leer más</a>
+                </article>
             </div>
         </div>
     </section>
 
     <!-- Contacto -->
-    <section class="contact-section">
+    <section class="contact-section" id="contacto">
         <div class="container">
             <h2 class="section-title">Contáctame</h2>
+            <p class="section-subtitle">¿Tienes un proyecto o colaboración en mente? Respondo en 24-48 horas.</p>
             <div class="contact-content">
                 <div class="contact-form-container">
                     <form id="contact-form" class="contact-form animate-on-scroll">
@@ -145,6 +352,11 @@
                             <i class="fas fa-paper-plane"></i> Enviar mensaje
                         </button>
                     </form>
+                    <div class="contact-social-inline">
+                        <a href="https://www.linkedin.com/in/jozetramirez" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                        <a href="https://github.com/Brody730/" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="mailto:imbestseth@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+                    </div>
                 </div>
             </div>
         </div>
