@@ -205,8 +205,9 @@ section {
 /* Hero */
 .hero-tagline {
     max-width: 560px;
-    color: #4b5563;
+    color: #374151;
     margin: 1rem auto 1.5rem;
+    font-weight: 500;
 }
 
 .hero-highlights {
@@ -221,12 +222,14 @@ section {
     display: inline-flex;
     align-items: center;
     gap: 0.45rem;
-    background: rgba(37, 99, 235, 0.08);
-    color: var(--primary-color);
+    background: rgba(37, 99, 235, 0.16);
+    color: #1d4ed8;
     padding: 0.4rem 0.8rem;
     border-radius: 999px;
     font-weight: 600;
     font-size: 0.9rem;
+    border: 1px solid rgba(37, 99, 235, 0.3);
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.12);
 }
 
 /* Menú móvil */
