@@ -162,6 +162,66 @@
     margin-bottom: 20px;
 }
 
+/* ================================================================
+   PROJECT PLACEHOLDERS
+   Reemplazan las imágenes de via.placeholder.com con gradientes
+   profesionales + ícono del stack principal.
+
+   Uso en HTML:
+   <div class="project-placeholder gradient-blue">
+       <i class="fab fa-php"></i>
+       <span>Nombre del proyecto</span>
+   </div>
+
+   Gradientes disponibles:
+     gradient-blue    → proyectos generales / portafolio
+     gradient-green   → proyectos de negocio / producción
+     gradient-purple  → tech / demos modernos
+     gradient-teal    → corporativo / freelance
+     gradient-orange  → académico / en progreso
+     gradient-pink    → personal / creativo
+   ================================================================ */
+.project-placeholder {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-placeholder {
+    transform: scale(1.05);
+}
+
+.project-placeholder i {
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.project-placeholder span {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.02em;
+}
+
+/* Variantes de gradiente para cada tipo de proyecto */
+.gradient-blue   { background: linear-gradient(135deg, #2563eb, #1e40af); }
+.gradient-green  { background: linear-gradient(135deg, #059669, #047857); }
+.gradient-purple { background: linear-gradient(135deg, #7c3aed, #5b21b6); }
+.gradient-teal   { background: linear-gradient(135deg, #0d9488, #0f766e); }
+.gradient-orange { background: linear-gradient(135deg, #ea580c, #c2410c); }
+.gradient-pink   { background: linear-gradient(135deg, #e11d48, #be123c); }
+
+@media (max-width: 480px) {
+    .project-placeholder {
+        height: 200px;
+    }
+}
+
 /* Animaciones */
 @keyframes fadeIn {
     from {

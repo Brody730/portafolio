@@ -131,6 +131,82 @@ function initLoadAnimations() {
     }, 100);
 }
 
+/**
+ * initTypingAnimation — Escribe y borra frases en el elemento #typed-text
+ *
+ * Cómo funciona:
+ *  1. Escribe letra por letra la frase actual (velocidad: SPEED_WRITE ms)
+ *  2. Pausa al terminar (PAUSE_MS ms)
+ *  3. Borra letra por letra (velocidad: SPEED_DELETE ms)
+ *  4. Pasa a la siguiente frase y repite
+ *
+ * Para cambiar las frases, edita el array PHRASES.
+ * El cursor parpadeante (|) es un <span class="typing-cursor"> en el HTML,
+ * animado solo con CSS en contact-form.css → no necesita JS.
+ */
+function initTypingAnimation() {
+    const el = document.getElementById('typed-text');
+    if (!el) return;   // solo corre en páginas que tengan #typed-text
+
+    // ── Configura aquí tus frases ──────────────────────────────────
+    const PHRASES = [
+        'Desarrollador Web Full Stack',
+        'Front-end Developer',
+        'Back-end Developer',
+        'Amante del buen código'
+    ];
+    const SPEED_WRITE  = 80;    // ms entre cada letra al escribir
+    const SPEED_DELETE = 45;    // ms entre cada letra al borrar
+    const PAUSE_MS     = 1800;  // ms de pausa al terminar una frase
+    // ──────────────────────────────────────────────────────────────
+
+    let phraseIndex = 0;
+    let charIndex   = 0;
+    let isDeleting  = false;
+
+    function tick() {
+        const current = PHRASES[phraseIndex];
+
+        if (isDeleting) {
+            // Borrar un carácter
+            charIndex--;
+            el.textContent = current.substring(0, charIndex);
+        } else {
+            // Escribir un carácter
+            charIndex++;
+            el.textContent = current.substring(0, charIndex);
+        }
+
+        // ¿Terminó de escribir?
+        if (!isDeleting && charIndex === current.length) {
+            setTimeout(() => { isDeleting = true; tick(); }, PAUSE_MS);
+            return;
+        }
+
+        // ¿Terminó de borrar?
+        if (isDeleting && charIndex === 0) {
+            isDeleting   = false;
+            phraseIndex  = (phraseIndex + 1) % PHRASES.length;
+        }
+
+        setTimeout(tick, isDeleting ? SPEED_DELETE : SPEED_WRITE);
+    }
+
+    // Pequeño delay inicial para que la página cargue primero
+    setTimeout(tick, 500);
+}
+
+/**
+ * initDynamicYear — Pone el año actual en #footer-year
+ * Así el copyright nunca queda desactualizado.
+ */
+function initDynamicYear() {
+    const yearEl = document.getElementById('footer-year');
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+    }
+}
+
 // Inicializar todas las funciones cuando el DOM esté cargado
 document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
@@ -139,6 +215,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothScrolling();
     initAnimateOnScroll();
     initLoadAnimations();
+    initTypingAnimation();   // ← animación de texto en el hero
+    initDynamicYear();       // ← año en el footer
 });
 
 // Inicialización cuando todo esté cargado
