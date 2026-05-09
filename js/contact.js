@@ -35,10 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando…';
 
         // Recopilar datos del formulario como objeto JSON
+        // El campo #subject existe en contact.html pero no en index.html — se incluye solo si existe
+        const subjectEl = form.querySelector('#subject');
         const formData = {
             name:    form.querySelector('#name')?.value    || '',
             email:   form.querySelector('#email')?.value   || '',
-            message: form.querySelector('#message')?.value || ''
+            message: form.querySelector('#message')?.value || '',
+            ...(subjectEl && subjectEl.value ? { _subject: subjectEl.value } : {})
         };
 
         try {

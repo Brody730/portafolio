@@ -237,6 +237,29 @@
     color: var(--primary-color);
     display: inline-block;
     margin-bottom: 0.35rem;
+    font-size: 0.9rem;
+}
+
+/* Título del puesto dentro del timeline */
+.timeline-item h3 {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 0.15rem;
+}
+
+/* Nombre de la empresa — gris sutil debajo del puesto */
+.timeline-company {
+    font-weight: 600;
+    color: var(--primary-color) !important;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem !important;
+}
+
+.learning-note {
+    font-style: italic;
+    color: #6b7280 !important;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
 }
 
 .tools-grid {
