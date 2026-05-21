@@ -222,6 +222,7 @@
 
 .timeline-marker {
     position: relative;
+    z-index: 1;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -233,18 +234,17 @@
     margin-top: 8px;
 }
 
-.timeline-marker::after {
+.timeline-item::after {
     content: '';
     position: absolute;
-    top: 14px;
-    left: 50%;
+    left: 7px;
+    top: 30px;
     width: 2px;
-    height: calc(100% - 8px);
+    height: calc(100% - 38px);
     background: rgba(148, 163, 184, 0.35);
-    transform: translateX(-50%);
 }
 
-.timeline-item:last-child .timeline-marker::after {
+.timeline-item:last-child::after {
     display: none;
 }
 
