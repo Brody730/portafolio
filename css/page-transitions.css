@@ -1,24 +1,92 @@
-/* Animaciones de transición entre páginas */
-.page-transition-overlay {
+/* ================================================================
+   TRANSICIONES DE PÁGINA
+
+   Efecto: 3 barras horizontales que deslizan desde la derecha,
+   cubren la pantalla en secuencia y luego salen por la izquierda.
+   Total: ~500ms (rápido y profesional).
+
+   Cómo funciona:
+   1. navigation.js crea el overlay con 3 barras al hacer clic en un nav-link
+   2. Las barras entran con un delay escalonado (0ms, 80ms, 160ms)
+   3. Cuando cubren la pantalla, se navega a la nueva página
+   4. Al cargar la nueva página, las barras salen por la izquierda
+
+   Para cambiar colores: edita las variables --bar-1, --bar-2, --bar-3
+   Para más/menos barras: edita navigation.js → createTransition()
+   ================================================================ */
+
+:root {
+    --bar-1: var(--primary-color);           /* azul principal */
+    --bar-2: var(--primary-color-dark);      /* azul oscuro */
+    --bar-3: #111827;                        /* casi negro */
+}
+
+/* Contenedor del overlay — cubre toda la pantalla */
+.page-transition {
     position: fixed;
-    top: 0;
+    inset: 0;
+    z-index: 99999;
+    pointer-events: none;
+}
+
+/* Cada barra ocupa 100% del ancho y 33.4% del alto */
+.page-transition .bar {
+    position: absolute;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 9999;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    height: 33.4%;
+    transform: translateX(100%);          /* empieza fuera de pantalla (derecha) */
+    will-change: transform;
 }
 
-/* Animación de entrada para secciones */
-section {
+.page-transition .bar:nth-child(1) { top: 0;      background: var(--bar-1); }
+.page-transition .bar:nth-child(2) { top: 33.3%;  background: var(--bar-2); }
+.page-transition .bar:nth-child(3) { top: 66.6%;  background: var(--bar-3); }
+
+/* ── ENTRADA: barras deslizan desde la derecha ── */
+.page-transition.entering .bar {
+    animation: bar-enter 0.35s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+.page-transition.entering .bar:nth-child(2) { animation-delay: 0.07s; }
+.page-transition.entering .bar:nth-child(3) { animation-delay: 0.14s; }
+
+@keyframes bar-enter {
+    from { transform: translateX(100%); }
+    to   { transform: translateX(0); }
+}
+
+/* ── SALIDA: barras salen por la izquierda ── */
+.page-transition.leaving .bar {
+    transform: translateX(0);
+    animation: bar-leave 0.35s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+.page-transition.leaving .bar:nth-child(2) { animation-delay: 0.07s; }
+.page-transition.leaving .bar:nth-child(3) { animation-delay: 0.14s; }
+
+@keyframes bar-leave {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-100%); }
+}
+
+/* ================================================================
+   ANIMACIONES DE ENTRADA PARA SECCIONES Y ELEMENTOS
+   ================================================================ */
+
+/* Elementos que aparecen al hacer scroll */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.visible {
     opacity: 1;
     transform: translateY(0);
-    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-/* Añadir clase para animación específica */
+/* Secciones con animación de carga */
 section.animate-on-load {
     opacity: 0;
     transform: translateY(20px);
@@ -27,130 +95,55 @@ section.animate-on-load {
 section.animate-on-load.visible {
     opacity: 1;
     transform: translateY(0);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* Animación de entrada para elementos específicos */
-.animate-on-scroll {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.animate-on-scroll.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Animación de scroll */
-.scroll-down {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: linear-gradient(to right, transparent, var(--primary-color), transparent);
-    cursor: pointer;
-    animation: bounce 2s infinite;
-}
-
-.scroll-down span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 3px;
-    height: 3px;
-    background: white;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    animation: scroll-indicator 1.5s infinite;
-}
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translateX(-50%) translateY(0);
-    }
-    50% {
-        transform: translateX(-50%) translateY(-10px);
-    }
-}
-
-@keyframes scroll-indicator {
-    0%, 100% {
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(1);
-    }
-    50% {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1.5);
-    }
-}
-
-/* Animación de texto tipado */
-.typed-text {
-    position: relative;
-    display: inline-block;
-}
-
-.typed-text::after {
-    content: '|';
-    margin-left: 5px;
-    animation: blink 1s infinite;
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 0; }
-    50% { opacity: 1; }
-}
-
-/* Animación de elementos al hacer scroll */
-.animate-on-scroll {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.animate-on-scroll.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Animación de elementos que aparecen desde los lados */
-.from-left {
-    opacity: 0;
-    transform: translateX(-20px);
-}
-
-.from-right {
-    opacity: 0;
-    transform: translateX(20px);
-}
+/* Animaciones desde los lados */
+.from-left  { opacity: 0; transform: translateX(-20px); }
+.from-right { opacity: 0; transform: translateX(20px); }
 
 .from-left.visible,
 .from-right.visible {
     opacity: 1;
     transform: translateX(0);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* Animación de elementos que rotan */
-.rotate-in {
-    opacity: 0;
-    transform: rotateY(-90deg);
-}
-
-.rotate-in.visible {
-    opacity: 1;
-    transform: rotateY(0);
-}
-
-/* Animación de elementos que escalan */
-.scale-in {
-    opacity: 0;
-    transform: scale(0.9);
-}
+/* Animación de escala */
+.scale-in { opacity: 0; transform: scale(0.9); }
 
 .scale-in.visible {
     opacity: 1;
     transform: scale(1);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Indicador de scroll en el hero */
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 26px;
+    height: 42px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 13px;
+    cursor: pointer;
+}
+
+.scroll-down span {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    width: 4px;
+    height: 8px;
+    background: white;
+    border-radius: 2px;
+    transform: translateX(-50%);
+    animation: scroll-dot 1.8s ease-in-out infinite;
+}
+
+@keyframes scroll-dot {
+    0%   { opacity: 1; top: 8px; }
+    100% { opacity: 0; top: 24px; }
 }

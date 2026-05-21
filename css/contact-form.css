@@ -84,6 +84,65 @@
     font-size: 1.1rem;
 }
 
+/* ================================================================
+   HERO SECTION
+   Nota: estos estilos están aquí porque contact-form.css se carga
+   en todas las páginas que necesitan el hero. Si quieres separarlo,
+   crea css/hero.css e impórtalo en index.html.
+   ================================================================ */
+
+/* Título principal del hero
+   - NO usa .section-title para evitar text-align:center y el underline azul
+     que serían invisibles sobre el fondo azul del hero
+   - El <span> dentro recibe un color ligeramente distinto para resaltar el nombre */
+.hero-title {
+    font-size: 3.25rem;
+    font-weight: 700;
+    color: white;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+    text-align: left;        /* alineado a la izquierda en desktop */
+}
+
+.hero-title span {
+    color: rgba(255, 255, 255, 0.85);  /* nombre con ligera transparencia */
+}
+
+/* Cursor parpadeante del typing animation
+   El span.typing-cursor se coloca justo después de #typed-text en el HTML */
+.typing-cursor {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 300;
+    animation: blink-cursor 0.8s step-end infinite;
+    margin-left: 2px;
+}
+
+@keyframes blink-cursor {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+}
+
+/* ----------------------------------------------------------------
+   HIGHLIGHT TAGS en el hero
+   Problema original: usaban color #1d4ed8 (azul oscuro) sobre fondo
+   azul → completamente invisibles.
+   Solución: cuando están dentro de .hero-section forzamos colores blancos.
+   ---------------------------------------------------------------- */
+.hero-section .highlight-tag {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: none;
+}
+
+/* Responsive: en tablets/móvil el hero pasa a columna centrada */
+@media (max-width: 1024px) {
+    .hero-title {
+        text-align: center;
+    }
+}
+
 /* Estilos para el hero section */
 .hero-section {
     position: relative;

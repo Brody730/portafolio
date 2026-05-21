@@ -114,7 +114,10 @@
                         <textarea id="message" name="message" rows="5" placeholder="Tu mensaje" required></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    <!-- Botón de envío — contact.js maneja el submit vía Formspree -->
+                    <button type="submit" class="btn btn-primary form-submit">
+                        <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                    </button>
                     <a href="https://wa.me/527831120027?text=Hola,%20me%20gustaría%20contactarte%20desde%20tu%20página%20web." target="_blank" rel="noreferrer" class="btn btn-whatsapp">
                         <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
                     </a>
@@ -162,7 +165,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2024 Cesar Jozet Cruz Ramirez. Todos los derechos reservados.
+            &copy; <span id="footer-year">2025</span> Cesar Jozet Cruz Ramirez. Todos los derechos reservados.
         </div>
     </footer>
 
