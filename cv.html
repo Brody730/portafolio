@@ -42,8 +42,11 @@
             <h1 class="section-title">Mi <span>Curriculum</span></h1>
             <p class="section-subtitle">Resumen profesional, experiencia y stack principal para entender cómo puedo aportar valor a tu equipo.</p>
             <div class="cv-actions">
-                <a href="assets/pdfs/CV_CruzRamirezCesarJozet.pdf" download="JozetRamirez-CV.pdf" class="btn btn-accent">
+                <button onclick="descargarCV()" class="btn btn-accent">
                     <i class="fas fa-download"></i> Descargar PDF
+                </button>
+                <a href="Yo.html" target="_blank" class="btn btn-secondary">
+                    <i class="fas fa-eye"></i> Ver CV completo
                 </a>
                 <a href="contact.html" class="btn btn-secondary">
                     <i class="fas fa-paper-plane"></i> Contactarme
@@ -317,5 +320,10 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        function descargarCV() {
+            const win = window.open('Yo.html?pdf=1', '_blank');
+        }
+    </script>
 </body>
 </html>

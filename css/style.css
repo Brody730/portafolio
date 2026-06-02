@@ -83,6 +83,18 @@ section {
     transform: translateY(-2px);
 }
 
+.btn-outline {
+    background-color: transparent;
+    color: var(--text-color, #333);
+    border: 2px solid var(--text-color, #333);
+}
+
+.btn-outline:hover {
+    background-color: var(--text-color, #333);
+    color: white;
+    transform: translateY(-2px);
+}
+
 /* Títulos */
 .section-title {
     font-size: 2.5rem;
